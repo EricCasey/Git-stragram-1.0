@@ -13,9 +13,9 @@ const Form = React.createClass({
 
   grabGitPush : (e) => {
     // console.log(e)
-    console.log(this.state.userName + " < --- Username")
+    console.log(this.state.username + " < --- Username")
     var userName = this.state.userName;
-    fetch(`http://localhost:3001/api/commitGrabber/${userName}`, {
+    fetch(`http://localhost:3001/api/commitGrabber/eric`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

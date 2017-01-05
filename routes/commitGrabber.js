@@ -14,6 +14,8 @@ module.exports = () => {
 
     let username = req.params.username
     console.log(req.body)
+    console.log(username)
+    console.log(req.params.username)
     let data = req.body[0]
 
   });

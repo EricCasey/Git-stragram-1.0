@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from './Form/Form.jsx';
+import Form from './Form/Form1.jsx';
 import Preview from './Preview/Preview.jsx';
 import PostPreview from './PP/PP.jsx';
 

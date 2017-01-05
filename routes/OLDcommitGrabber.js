@@ -24,11 +24,6 @@ function getDLRepoContribz(username) {
         }
     };
 
-    // if (!fs.existsSync(newModule.env)) {
-    //   throw Error(`YOU DONT HAVE A .env FILE!`);
-    // };
-    console.log(chalk.yellow(`1 VALID INPUT - CRAFTING REQUEST!\n*`));
-
     request.get(requestData, (err, response, body) => {
 
         if (err) {

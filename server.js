@@ -6,7 +6,7 @@ const fs = require('fs');
 const chalk = require('chalk');
 const clear = require('clear');
 const request = require('request');
-
+const http = require('https');
 // routes
 const commitGrabber = require('./routes/commitGrabber.js');
 
@@ -29,8 +29,32 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.post("/api/commitGrabber/:username", function (req, res) {
+
   console.log(req.params.username)
-  res.send('ayyyy')
+  console.log(commitGrabber)
+  console.log(process.env.test)
+  var username = req.params.username;
+  var options = {
+    host: 'api.github.com',
+    path: `/users/${username}/events`,
+    headers: {
+      'User-Agent': 'TRON'
+    }
+  };
+
+  var callback = function(response) {
+    var str = '';
+    //another chunk of data has been recieved, so append it to `str`
+    response.on('data', function (chunk) {
+      str += chunk;
+    });
+    //the whole response has been recieved, so we just print it out here
+    response.on('end', function () {
+      console.log(str);
+      res.send(str)
+    });
+  }
+  http.request(options, callback).end();
 });
 
 app.listen(app.get('port'), () => {
