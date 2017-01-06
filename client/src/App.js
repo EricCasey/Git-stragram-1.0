@@ -1,6 +1,6 @@
 import React from 'react';
 import Form from './Form/Form1.jsx';
-import Preview from './Preview/Preview.jsx';
+import Settings from './Settings/Settings.jsx';
 import PostPreview from './PP/PP.jsx';
 
 const App = React.createClass({
@@ -8,18 +8,13 @@ const App = React.createClass({
     return { };
   },
 
-  lastPush: function (username) {
-    console.log(username)
-    event.preventDefault();
-    console.log("godegrabengaged!")
-    return "grabbed"
-  },
-
   render: function () {
     return (
       <div className='App'>
-        <Form getLastPush={this.lastPush}/>
-        <Preview />
+        <div id="actions">
+          <Form />
+          <Settings />
+        </div>
         <PostPreview />
       </div>
     );

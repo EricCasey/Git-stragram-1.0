@@ -29,10 +29,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.post("/api/commitGrabber/:username", function (req, res) {
-
-  console.log(req.params.username)
-  console.log(commitGrabber)
-  console.log(process.env.test)
   var username = req.params.username;
   var options = {
     host: 'api.github.com',
@@ -50,10 +46,11 @@ app.post("/api/commitGrabber/:username", function (req, res) {
     });
     //the whole response has been recieved, so we just print it out here
     response.on('end', function () {
-      console.log(str);
+      console.log("Github API Call Complete for: " + username)
       res.send(str)
     });
   }
+
   http.request(options, callback).end();
 });
 

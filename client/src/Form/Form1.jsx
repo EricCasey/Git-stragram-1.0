@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './Form.css';
+import Dropdown from '../Dropdown/Dropdown.jsx'
 
 class Form extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      userName : ''
+      userName : '',
+      gistory : [],
+      grabbed : false
     };
     this.handleUChange = this.handleUChange.bind(this);
     this.grabGit = this.grabGit.bind(this);
@@ -16,7 +19,7 @@ class Form extends Component {
     this.setState({ userName: target })
   }
 
-  grabGit() {
+  grabGit = () => {
     var userName = this.state.userName;
     fetch(`http://localhost:3001/api/commitGrabber/${userName}`, {
       method: 'POST',
@@ -25,29 +28,39 @@ class Form extends Component {
        'Content-Type': 'application/json'
       },
       body: JSON.stringify(
-        { 'username' : 'Fuckyou' }
+        { 'username' : 'testesterpp' }
       )
-    }).then(response => {
-      console.log(response)
-      return response.json();
-      
+    }).then((response) => {
+      // console.log(response.json())
+      //var result = response
+      //this.setState({ gistory : 'workin?' })
+      return response.json()
+    }).then(json => {
+      // console.log(JSON.stringify(json))
+      this.setState({
+        gistory : json,
+        grabbed : true
+      })
     })
   }
 
   render() {
     return (
       <div id="Form">
-      <h2> Gitstagram </h2>
+      <h2> Gitstagram.io </h2>
       <form>
         <input
           id="GHinput"
           onChange={(e) => {this.handleUChange(e.target.value, e.target.name)}}
           placeholder="GitHub Username"
           />
-        <div id="submit" onClick={this.grabGit}> </div>
-        <code>{this.state.userName}</code>
+        <div id="submit" onClick={this.grabGit}>Grab My Code!</div>
+        <Dropdown
+          history={this.state.gistory}
+          grabbed={this.state.grabbed}
+        />
       </form>
-      </div>
+     </div>
     )
   }
 }
