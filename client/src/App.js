@@ -1,6 +1,5 @@
 import React from 'react';
 import Form from './Form/Form1.jsx';
-import Settings from './Settings/Settings.jsx';
 import PostPreview from './PP/PP.jsx';
 
 const App = React.createClass({
@@ -12,8 +11,8 @@ const App = React.createClass({
     return (
       <div className='App'>
         <div id="actions">
+          <h2> Gitstagram.io </h2>
           <Form />
-          <Settings />
         </div>
         <PostPreview />
       </div>

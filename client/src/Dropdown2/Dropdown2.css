@@ -5,7 +5,7 @@
   margin: 0 auto;
 }
 #dropdown {
-  max-height: 300px;
+  max-height: 200px;
   overflow: scroll;
   margin: 0 auto;
   border: 2px solid yellow;
@@ -21,4 +21,10 @@
 }
 .drop:hover {
   background: yellow;
+}
+#yep {
+  background: red;
+}
+.repoName {
+
 }

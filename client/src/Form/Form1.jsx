@@ -47,7 +47,6 @@ class Form extends Component {
   render() {
     return (
       <div id="Form">
-      <h2> Gitstagram.io </h2>
       <form>
         <input
           id="GHinput"
@@ -58,6 +57,7 @@ class Form extends Component {
       <Dropdown2
         history={this.state.gistory}
         grabbed={this.state.grabbed}
+        username={this.state.userName}
         />
       </form>
      </div>

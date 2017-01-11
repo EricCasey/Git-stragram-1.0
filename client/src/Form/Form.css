@@ -2,12 +2,6 @@
   margin: 0 auto;
   text-align: center;
 }
-h2 {
-   color: violet;
-   margin: 0 auto;
-   text-decoration: underline;
-   margin: 4px auto 8px auto;
- }
 #submit {
   height: 30px;
   background: red;
