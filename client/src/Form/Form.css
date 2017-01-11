@@ -8,6 +8,8 @@
   max-width: 40%;
   color: white;
   margin: 4px auto;
+  padding-top: 3px;
+  border: 2px solid white;
 }
 #submit:hover {
   background: white;

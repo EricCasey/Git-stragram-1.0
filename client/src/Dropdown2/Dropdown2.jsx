@@ -31,7 +31,11 @@ const Dropdown2 = React.createClass({
   render: function () {
       if (this.props.grabbed) {
         var history = []
-        for (var part in this.props.history) { if (this.props.grabbed) { history.push(part) } }
+        for (var part in this.props.history) {
+          if (this.props.grabbed) {
+            history.push(part)
+          }
+        }
         return (
           <div>
             <div id="dropdown">
@@ -42,9 +46,10 @@ const Dropdown2 = React.createClass({
                   var repoURL = this.props.history[index].repo.url
                   return (
                     <div className="drop" key={index} onClick={boundItemClick}>
-                      {this.props.history[index].type + ' at ' +
-                        this.props.history[index].created_at + ' in '} <br/>
                       <b className="repoName">{repoURL.replace(/^(.*[/])/ig, '') }</b>
+                      <br/>
+                      {this.props.history[index].type + ' at ' +
+                        this.props.history[index].created_at}
                     </div>
                   )
                 })}

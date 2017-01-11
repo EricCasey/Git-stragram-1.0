@@ -1,6 +1,9 @@
 #CodeArea {
   border: 3px solid INDIGO;
   text-align: left;
+  font-size: 10pt;
+  height: 400px;
+  overflow: scroll;
 }
 code {
   font-family: monospace;

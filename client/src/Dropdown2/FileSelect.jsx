@@ -20,6 +20,7 @@ class FileSelect extends Component {
     return (
       <div>
         <div id="Files">
+          <p>Files Changed:</p>
           {this.props.files.map((file, index) => {
             let boundItemClick = this.FileClick.bind(this, file);
             return (
@@ -27,7 +28,7 @@ class FileSelect extends Component {
                 key={index}
                 className="file"
                 onClick={boundItemClick}>
-                {JSON.stringify(this.props.files[index].filename)}
+                {JSON.stringify(this.props.files[index].filename).replace(/"/g,"")}
               </div>
             )
           })}

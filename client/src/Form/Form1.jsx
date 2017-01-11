@@ -53,7 +53,7 @@ class Form extends Component {
           onChange={(e) => {this.handleUChange(e.target.value, e.target.name)}}
           placeholder="GitHub Username"
           />
-        <div id="submit" onClick={this.grabGit}>Grab My Code!</div>
+        <div id="submit" onClick={this.grabGit}>Retrieve My Commits!</div>
       <Dropdown2
         history={this.state.gistory}
         grabbed={this.state.grabbed}
