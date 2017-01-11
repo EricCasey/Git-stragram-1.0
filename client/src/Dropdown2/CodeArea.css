@@ -1,0 +1,8 @@
+#CodeArea {
+  border: 3px solid INDIGO;
+  text-align: left;
+}
+code {
+  font-family: monospace;
+  white-space: pre;
+}

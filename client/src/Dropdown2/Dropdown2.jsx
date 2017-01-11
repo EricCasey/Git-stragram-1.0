@@ -12,7 +12,7 @@ const Dropdown2 = React.createClass({
 
   onItemClick: function (e) {
     var commitURL = this.props.history[e].payload.commits[0].url
-    console.log(commitURL)
+    //console.log(commitURL)
     fetch(commitURL, {
       method: 'GET',
       headers: {
@@ -22,7 +22,7 @@ const Dropdown2 = React.createClass({
     }).then((response) => {
       return response.json()
     }).then(json => {
-      console.log(json.files)
+      //console.log(json.files)
       this.setState({ files : json.files })
     })
 
@@ -38,12 +38,10 @@ const Dropdown2 = React.createClass({
                 { history.map((item, index) => {
                   let boundItemClick = this.onItemClick.bind(this, item);
                   // console.log(typeof(this.props.history[index].created_at))
-                  var selectedID = 'nope';
-                  if (index === this.state.selected) { selectedID = 'yep'}
                   // console.log(this.props.username)
                   var repoURL = this.props.history[index].repo.url
                   return (
-                    <div className="drop" key={index} onClick={boundItemClick} id={selectedID}>
+                    <div className="drop" key={index} onClick={boundItemClick}>
                       {this.props.history[index].type + ' at ' +
                         this.props.history[index].created_at + ' in '} <br/>
                       <b className="repoName">{repoURL.replace(/^(.*[/])/ig, '') }</b>
@@ -55,7 +53,7 @@ const Dropdown2 = React.createClass({
           </div>
         )
       } else {
-        return ( <div id="dropdown"> input username</div> )
+        return ( <div></div> )
       }
 }
 });
