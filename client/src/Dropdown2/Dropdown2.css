@@ -1,0 +1,24 @@
+#postpreview {
+  height: 300px;
+  width: 300px;
+  border: 3px solid black;
+  margin: 0 auto;
+}
+#dropdown {
+  max-height: 300px;
+  overflow: scroll;
+  margin: 0 auto;
+  border: 2px solid yellow;
+}
+.drop {
+  border: 2px solid black;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.drop:selected {
+
+}
+.drop:hover {
+  background: yellow;
+}

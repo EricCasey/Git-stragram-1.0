@@ -9,9 +9,10 @@ const Dropdown = React.createClass({
 
   render: function () {
     if (this.props.grabbed) {
+      console.log(this.props.history)
       console.log(typeof(this.props.history))
       var history = []
-      history.push(this.props.history)
+      for (var part in this.props.history) { history.push(part) }
       return (
         <div id="dropdown">
           <select>

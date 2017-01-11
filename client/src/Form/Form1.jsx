@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Form.css';
-import Dropdown from '../Dropdown/Dropdown.jsx'
+import Dropdown2 from '../Dropdown2/Dropdown2.jsx';
 
 class Form extends Component {
 
@@ -55,9 +55,9 @@ class Form extends Component {
           placeholder="GitHub Username"
           />
         <div id="submit" onClick={this.grabGit}>Grab My Code!</div>
-        <Dropdown
-          history={this.state.gistory}
-          grabbed={this.state.grabbed}
+      <Dropdown2
+        history={this.state.gistory}
+        grabbed={this.state.grabbed}
         />
       </form>
      </div>
