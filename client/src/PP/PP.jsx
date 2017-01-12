@@ -9,7 +9,12 @@ const PP = React.createClass({
   render: function () {
     return (
       <div id="postpreview">
-        This is where I'll be using PhantomJS to screenshot the preview and post it to instagram
+        <div id="square">
+          <div id="username"></div>
+          <div id="postCodeArea">
+            <code id="PostCode"></code>
+          </div>
+        </div>
       </div>
     );
   },

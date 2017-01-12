@@ -12,7 +12,7 @@ const App = React.createClass({
       <div className='App'>
         <div id="actions">
           <h2> Gitstagram.io </h2>
-          <Form />
+          <Form /> 
         </div>
         <PostPreview />
       </div>

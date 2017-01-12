@@ -12,7 +12,7 @@ class FileSelect extends Component {
   };
 
   FileClick = (e) => {
-    console.log(e.patch)
+    // console.log(e.patch)
     this.setState({ code : e.patch })
   }
 
