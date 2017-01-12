@@ -18,7 +18,7 @@
     "concurrently": "^3.1.0"
   },
   "scripts": {
-    "start-alone": "npm run server1",
+    "start-elone": "npm run server1",
     "start": "concurrently \"npm run server1\" \"npm run client\"",
     "server": "babel-node server.js",
     "server1": "node server.js",
