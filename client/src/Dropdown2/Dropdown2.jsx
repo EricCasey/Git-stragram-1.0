@@ -12,7 +12,7 @@ const Dropdown2 = React.createClass({
 
   onItemClick: function (e) {
     var commitURL = this.props.history[e].payload.commits[0].url
-    //console.log(commitURL)
+    console.log(commitURL)
     fetch(commitURL, {
       method: 'GET',
       headers: {

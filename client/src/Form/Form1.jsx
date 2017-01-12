@@ -37,7 +37,7 @@ class Form extends Component {
       //this.setState({ gistory : 'workin?' })
       return response.json()
     }).then(json => {
-      // console.log(JSON.stringify(json))
+      //console.log(JSON.stringify(json))
       this.setState({
         gistory : json,
         grabbed : true

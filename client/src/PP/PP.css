@@ -36,7 +36,7 @@
   flex-grow: 1;
 }
 #postCodeArea {
-  margin: 40px 1% 40px 1%;
+  margin: 40px 0 40px 0;
   border: 3px solid black;
   height: 280px;
   border-radius: 5px;
@@ -46,5 +46,8 @@
 #PostCode {
   font-family: monospace;
   white-space: pre;
-  border: 1px solid yellow;
+}
+pre {
+  width: 100%;
+  margin-top: -3px;
 }

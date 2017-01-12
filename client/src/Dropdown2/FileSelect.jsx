@@ -12,7 +12,7 @@ class FileSelect extends Component {
   };
 
   FileClick = (e) => {
-    // console.log(e.patch)
+    // var StringifiedCode = JSON.stringify(e.patch)
     this.setState({ code : e.patch })
   }
 

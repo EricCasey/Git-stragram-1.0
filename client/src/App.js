@@ -11,8 +11,15 @@ const App = React.createClass({
     return (
       <div className='App'>
         <div id="actions">
-          <h2> Gitstagram.io </h2>
-          <Form /> 
+          <h1>
+            <span id="h2git">git</span>
+            <span id="h2sta">- stagram</span>
+            <span id="h2io"> .io</span>
+          </h1>
+          <i><p>Gitstagram is an app that crafts themed
+            square Instagram post comprised of new code
+            from your GitHub account!</p></i>
+          <Form />
         </div>
         <PostPreview />
       </div>

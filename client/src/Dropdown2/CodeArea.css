@@ -2,7 +2,7 @@
   border: 3px solid INDIGO;
   text-align: left;
   font-size: 10pt;
-  height: 400px;
+  max-height: 400px;
   overflow: scroll;
   padding: 8px;
 }

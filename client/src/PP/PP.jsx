@@ -1,18 +1,25 @@
 import React from 'react';
 import './PP.css';
+import hljs from 'highlight.js';
 
 const PP = React.createClass({
   getInitialState: function () {
-    return { };
+    return {
+      hashtags : []
+    };
   },
 
+
   render: function () {
+    hljs.initHighlighting()
     return (
       <div id="postpreview">
         <div id="square">
           <div id="username"></div>
           <div id="postCodeArea">
-            <code id="PostCode"></code>
+            <pre>
+              <code id="PostCode"></code>
+            </pre>
           </div>
         </div>
       </div>

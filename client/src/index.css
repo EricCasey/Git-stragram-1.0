@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono|Sacramento');
 body {
   margin: 0;
   padding: 0;
@@ -20,11 +21,26 @@ body {
   margin: 0 auto;
   border: 3px solid red;
   align-content: center;
+  padding: 15px 5px 0 5px;
 }
 
-h2 {
-   color: violet;
-   margin: 0 auto;
-   text-decoration: underline;
-   margin: 4px auto 8px auto;
- }
+h1 {
+
+   margin: 15px auto 8px auto;
+}
+#h2git {
+ color: Green;
+ font-family: 'Roboto Mono', monospace;
+}
+#h2sta {
+  font-family: 'Sacramento', cursive;
+  font-size: 40px;
+  color: violet;
+}
+#h2io {
+ font-family: 'Open Sans', sans-serif;
+ color: blue;
+}
+p {
+  margin: 0 5px;
+}
