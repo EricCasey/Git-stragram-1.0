@@ -5,4 +5,4 @@ Shoutout to these stream viewers for help on this:
 > - jtryon on livecoding.tv
 > - pixelprodotco on twitch
 
-bump
+bumpp
