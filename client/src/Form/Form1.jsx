@@ -16,7 +16,7 @@ class Form extends Component {
   };
 
   handleUChange(target, value) {
-    this.setState({ userName: target })
+    this.setState({ userName: target });
   }
 
   grabGit = () => {
