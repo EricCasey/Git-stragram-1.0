@@ -60,13 +60,16 @@ const Dropdown2 = React.createClass({
                     if (Math.round(dateDiff/(1000*60)) < 120) {
                       howLong = `${Math.round(dateDiff/(1000*60))} minutes ago`
                     }
-                    return howLong;
+                    if (Math.round(dateDiff/(1000*60)) < 5) {
+                      howLong = `a few minutes ago`
+                    }
+                    return (<i>{howLong}</i>)
                   }
                   return (
                     <div className="drop" key={index} onClick={boundItemClick}>
                       <b className="repoName">{ repoURL.replace(/^(.*[/])/ig, '') }</b>
                       <br/>
-                      { this.props.history[index].type + " - " + since() }
+                      { this.props.history[index].type + " - " } {since()}
                     </div>
                   )
                 })}
