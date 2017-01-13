@@ -22,7 +22,7 @@ class Form extends Component {
   grabGit = () => {
     var userName = this.state.userName;
     document.getElementById("username").innerHTML=`<div id="userArea"><img id="git" src="https://zato.io/static/img/icons/github-icon2.png"/><h3>${this.state.userName}</h3><div>`;
-    fetch(`http://localhost:3001/api/commitGrabber/${userName}`, {
+    fetch(`https://localhost:3001/api/commitGrabber/${userName}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -53,7 +53,6 @@ class Form extends Component {
           id="GHinput"
           onChange={(e) => {this.handleUChange(e.target.value, e.target.name)}}
           placeholder="GitHub Username"
-          onEnterPress={this.grabGit}
           />
         <div id="submit" onClick={this.grabGit}>Retrieve My Commits!</div>
       <Dropdown2
