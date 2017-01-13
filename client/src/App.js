@@ -15,7 +15,7 @@ const App = React.createClass({
             <span id="h2git">git</span>
             <span id="h2sta">- stagram</span>
             <span id="h2io"> .io</span>
-            <span id="h2beta"><sup>beta</sup></span>
+            <span id="h2beta"><sup>beta<sup id="af">af</sup></sup></span>
           </h1>
           <i><p>Gitstagram is an app that crafts themed
             square Instagram post comprised of new code
@@ -24,6 +24,10 @@ const App = React.createClass({
           <Form />
         </div>
         <PostPreview />
+        <div id="advanced">
+          this is where the formatting options will be
+        </div>
+        <div id="postButton">Post To Instagram!</div>
       </div>
     );
   },

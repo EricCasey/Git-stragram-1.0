@@ -53,6 +53,7 @@ class Form extends Component {
           id="GHinput"
           onChange={(e) => {this.handleUChange(e.target.value, e.target.name)}}
           placeholder="GitHub Username"
+          onEnterPress={this.grabGit}
           />
         <div id="submit" onClick={this.grabGit}>Retrieve My Commits!</div>
       <Dropdown2

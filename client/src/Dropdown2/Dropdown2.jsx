@@ -43,19 +43,30 @@ const Dropdown2 = React.createClass({
                   var repoURL = this.props.history[index].repo.url
                   var eventDate = new Date(Date.parse(this.props.history[index].created_at))
                   var since = () => {
-                    var one_day=1000*60;
-                    var eventMili = Date.parse(this.props.history[index].created_at)
-                    var nowMili = Date.now()
-                    var difference = nowMili - eventMili
-                    return Math.round(difference/one_day);
+                    var eventMili = Date.parse(this.props.history[index].created_at),
+                        nowMili = Date.now(),
+                        dateDiff = nowMili - eventMili,
+                        howLong = ''
+
+                    if (Math.round(dateDiff/(1000*60*60*24*30)) > 2) {
+                      howLong = 'more than a month ago'
+                    }
+                    if (Math.round(dateDiff/(1000*60*60*24)) < 29) {
+                      howLong = `${Math.round(dateDiff/(1000*60*60*24))} days ago`
+                    }
+                    if (Math.round(dateDiff/(1000*60*60)) < 48) {
+                      howLong = `${Math.round(dateDiff/(1000*60*60))} hours ago`
+                    }
+                    if (Math.round(dateDiff/(1000*60)) < 120) {
+                      howLong = `${Math.round(dateDiff/(1000*60))} minutes ago`
+                    }
+                    return howLong;
                   }
                   return (
                     <div className="drop" key={index} onClick={boundItemClick}>
                       <b className="repoName">{ repoURL.replace(/^(.*[/])/ig, '') }</b>
                       <br/>
-                      { this.props.history[index].type }
-                      <br/>
-                      { since() }
+                      { this.props.history[index].type + " - " + since() }
                     </div>
                   )
                 })}

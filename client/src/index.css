@@ -10,7 +10,7 @@ body {
 .App {
   width: 50%;
   max-height: 100%;
-  margin: 40px auto 0px auto;
+  margin: 40px auto 40px auto;
   border: 3px solid black;
   border-radius: 5px;
   min-width: 380px;
@@ -25,7 +25,6 @@ body {
 }
 
 h1 {
-
    margin: 15px auto 8px auto;
 }
 #h2git {
@@ -44,6 +43,20 @@ h1 {
 sup {
   color: orange;
 }
+#af {
+  color:black;
+}
 p {
   margin: 0 5px;
+}
+#advanced {
+  border: 3px solid blue;
+  height: 130px;
+  width: 90%;
+  margin: 5px auto;
+}
+#postButton {
+  max-width: 70%;
+  margin: 5px auto;
+  border: 3px solid orange;
 }
