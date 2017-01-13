@@ -15,10 +15,12 @@ const App = React.createClass({
             <span id="h2git">git</span>
             <span id="h2sta">- stagram</span>
             <span id="h2io"> .io</span>
+            <span id="h2beta"><sup>beta</sup></span>
           </h1>
           <i><p>Gitstagram is an app that crafts themed
             square Instagram post comprised of new code
             from your GitHub account!</p></i>
+          <p>if you dont have one... try 'nasa'</p>
           <Form />
         </div>
         <PostPreview />

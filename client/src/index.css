@@ -2,15 +2,15 @@
 body {
   margin: 0;
   padding: 0;
+  padding-top: 20px;
   font-family: sans-serif;
   text-align: center;
 }
 
 .App {
-  margin-top: 5%;
   width: 50%;
-  height: 100%;
-  margin: 0 auto;
+  max-height: 100%;
+  margin: 40px auto 0px auto;
   border: 3px solid black;
   border-radius: 5px;
   min-width: 380px;
@@ -40,6 +40,9 @@ h1 {
 #h2io {
  font-family: 'Open Sans', sans-serif;
  color: blue;
+}
+sup {
+  color: orange;
 }
 p {
   margin: 0 5px;

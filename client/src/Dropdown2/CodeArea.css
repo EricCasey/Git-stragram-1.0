@@ -10,3 +10,9 @@ code {
   font-family: monospace;
   white-space: pre;
 }
+code::selection {
+  background: red;
+}
+code::-moz-selection {
+  background: red;
+}

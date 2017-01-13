@@ -15,10 +15,7 @@ const Dropdown2 = React.createClass({
     console.log(commitURL)
     fetch(commitURL, {
       method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-       'Content-Type': 'application/json'
-      }
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
     }).then((response) => {
       return response.json()
     }).then(json => {
@@ -44,12 +41,21 @@ const Dropdown2 = React.createClass({
                   // console.log(typeof(this.props.history[index].created_at))
                   // console.log(this.props.username)
                   var repoURL = this.props.history[index].repo.url
+                  var eventDate = new Date(Date.parse(this.props.history[index].created_at))
+                  var since = () => {
+                    var one_day=1000*60;
+                    var eventMili = Date.parse(this.props.history[index].created_at)
+                    var nowMili = Date.now()
+                    var difference = nowMili - eventMili
+                    return Math.round(difference/one_day);
+                  }
                   return (
                     <div className="drop" key={index} onClick={boundItemClick}>
-                      <b className="repoName">{repoURL.replace(/^(.*[/])/ig, '') }</b>
+                      <b className="repoName">{ repoURL.replace(/^(.*[/])/ig, '') }</b>
                       <br/>
-                      {this.props.history[index].type + ' at ' +
-                        this.props.history[index].created_at}
+                      { this.props.history[index].type }
+                      <br/>
+                      { since() }
                     </div>
                   )
                 })}

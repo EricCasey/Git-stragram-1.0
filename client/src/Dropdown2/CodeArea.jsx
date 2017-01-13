@@ -23,10 +23,13 @@ class CodeArea extends Component {
 
 
     // language guesses for hashtags here lol
-     console.log(lang(this.props.code))
-     console.log(hljs.highlightAuto(this.props.code).language)
-    // console.log(typeof(hljs.highlightAuto(this.props.code.slice(points[0],points[1])).value))
-
+     var guessLang = lang(this.props.code)
+     var guesshljs = hljs.highlightAuto(this.props.code).language
+     document.getElementById("Hashtags").innerHTML=
+      `<p>
+        #${guessLang}
+        #${guesshljs}
+      </p>`;
   }
 
   render() {

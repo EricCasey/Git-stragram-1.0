@@ -22,6 +22,7 @@ const PP = React.createClass({
             </pre>
           </div>
         </div>
+        <div id="Hashtags"></div>
       </div>
     );
   },
