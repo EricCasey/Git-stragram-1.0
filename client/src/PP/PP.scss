@@ -1,0 +1,59 @@
+#postpreview {
+  width: 333px;
+  height: 588px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: 10px auto;
+  background: url('https://i.imgur.com/Y1cQA3u.png');
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: none;
+}
+#square {
+  margin-top: 98px;
+  border: 1px solid red;
+  height: 329px;
+  text-align: left;
+  overflow: hidden;
+}
+#userArea {
+  max-width: 150px;
+  overflow: hidden;
+  display: flex;
+  float: right;
+  margin-top: 4px;
+}
+#git {
+  height: 25px;
+  width: 25px;
+  margin: 3px;
+}
+#username h3 {
+  height: 30px;
+  max-width: 60%;
+  margin-top: 7px;
+  margin-right: 5px;
+  flex-grow: 1;
+}
+#postCodeArea {
+  margin: 40px 0 40px 0;
+  border: 3px solid black;
+  height: 280px;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+#PostCode {
+  font-family: monospace;
+  white-space: pre;
+}
+pre {
+  width: 100%;
+  margin-top: -3px;
+}
+#Hashtags {
+  border: 1px solid blue;
+  margin: 40px auto 0 auto;
+  max-width: 90%;
+  text-align: left;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Form.css';
+import './Form.scss';
 import Dropdown2 from '../Dropdown2/Dropdown2.jsx';
 
 class Form extends Component {
@@ -22,7 +22,7 @@ class Form extends Component {
   grabGit = () => {
     var userName = this.state.userName;
     document.getElementById("username").innerHTML=`<div id="userArea"><img id="git" src="https://zato.io/static/img/icons/github-icon2.png"/><h3>${this.state.userName}</h3><div>`;
-    fetch(`https://localhost:3001/api/commitGrabber/${userName}`, {
+    fetch(`http://localhost:3001/api/commitGrabber/${userName}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

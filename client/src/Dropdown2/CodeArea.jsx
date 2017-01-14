@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './CodeArea.css'
-import lang from 'language-classifier';
+import './CodeArea.scss'
 import hljs from 'highlight.js';
 
 class CodeArea extends Component {
@@ -23,12 +22,12 @@ class CodeArea extends Component {
 
 
     // language guesses for hashtags here lol
-     var guessLang = lang(this.props.code)
      var guesshljs = hljs.highlightAuto(this.props.code).language
+     var guesshljs2 = hljs.highlightAuto(this.props.code).second_best.language
      document.getElementById("Hashtags").innerHTML=
       `<p>
-        #${guessLang}
         #${guesshljs}
+        #${guesshljs2}
       </p>`;
   }
 

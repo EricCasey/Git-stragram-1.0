@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono|Sacramento');
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.App {
+  width: 50%;
+  max-height: 100%;
+  margin: 40px auto 40px auto;
+  border: 3px solid black;
+  border-radius: 5px;
+  min-width: 320px;
+  max-width: 450px;
+}
+
+#actions {
+  margin: 0 auto;
+  border: 3px solid red;
+  align-content: center;
+  padding: 15px 5px 0 5px;
+}
+
+h1 {
+   margin: 15px auto 8px auto;
+}
+#h2git {
+ color: Green;
+ font-family: 'Roboto Mono', monospace;
+}
+#h2sta {
+  font-family: 'Sacramento', cursive;
+  font-size: 40px;
+  color: violet;
+}
+#h2io {
+ font-family: 'Open Sans', sans-serif;
+ color: blue;
+}
+sup {
+  color: orange;
+}
+#af {
+  color:black;
+}
+p {
+  margin: 0 5px;
+}
+#advanced {
+  border: 3px solid blue;
+  height: 130px;
+  width: 90%;
+  margin: 5px auto;
+}
+#postButton {
+  max-width: 70%;
+  margin: 5px auto;
+  border: 3px solid orange;
+}

@@ -1,0 +1,29 @@
+#postpreview {
+  height: 300px;
+  width: 300px;
+  border: 3px solid black;
+  margin: 0 auto;
+}
+#dropdown {
+  max-height: 200px;
+  overflow: scroll;
+  margin: 0 auto;
+  border: 2px solid yellow;
+}
+.drop {
+  border: 2px solid black;
+  width: 90%;
+  margin: 1px auto;
+  overflow: hidden;
+}
+.drop:selected {
+}
+.drop:hover {
+  background: yellow;
+}
+#yep {
+  background: red;
+}
+.repoName {
+
+}

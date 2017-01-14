@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './FileSelect.css'
+import './FileSelect.scss'
 import CodeArea from './CodeArea.jsx'
 
 class FileSelect extends Component {
@@ -12,7 +12,8 @@ class FileSelect extends Component {
   };
 
   FileClick = (e) => {
-    // var StringifiedCode = JSON.stringify(e.patch)
+    var StringifiedCode = JSON.stringify(e.patch)
+    console.log(StringifiedCode.replace(/^(.*?)\@\@\\n/igm, ''))
     this.setState({ code : e.patch })
   }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Dropdown2.css';
+import './Dropdown2.scss';
 import FileSelect from './FileSelect.jsx';
 
 const Dropdown2 = React.createClass({
@@ -12,7 +12,7 @@ const Dropdown2 = React.createClass({
 
   onItemClick: function (e) {
     var commitURL = this.props.history[e].payload.commits[0].url
-    console.log(commitURL)
+  //  console.log(commitURL)
     fetch(commitURL, {
       method: 'GET',
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
@@ -41,7 +41,6 @@ const Dropdown2 = React.createClass({
                   // console.log(typeof(this.props.history[index].created_at))
                   // console.log(this.props.username)
                   var repoURL = this.props.history[index].repo.url
-                  var eventDate = new Date(Date.parse(this.props.history[index].created_at))
                   var since = () => {
                     var eventMili = Date.parse(this.props.history[index].created_at),
                         nowMili = Date.now(),

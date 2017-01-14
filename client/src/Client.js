@@ -1,12 +1,3 @@
-/* eslint-disable no-undef */
-function search(query, cb) {
-  return fetch(`api/food?q=${query}`, {
-    accept: 'application/json',
-  }).then(checkStatus)
-    .then(parseJSON)
-    .then(cb);
-}
-
 function checkStatus(response) {
   if (response.status >= 200 && response.status < 300) {
     return response;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './PP.css';
+import './PP.scss';
 import hljs from 'highlight.js';
 
 const PP = React.createClass({
