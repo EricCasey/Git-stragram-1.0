@@ -36,6 +36,7 @@ const Dropdown2 = React.createClass({
         return (
           <div>
             <div id="dropdown">
+              <p>Choose A Commit To Show Off:</p>
                 { history.map((item, index) => {
                   let boundItemClick = this.onItemClick.bind(this, item);
                   // console.log(typeof(this.props.history[index].created_at))

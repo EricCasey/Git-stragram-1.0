@@ -5,7 +5,7 @@
 #submit {
   height: 30px;
   background: red;
-  max-width: 40%;
+  width: 70%;
   color: white;
   margin: 4px auto;
   padding-top: 3px;
@@ -19,4 +19,8 @@
 input {
   margin: 10px auto 10px auto;
   border: 2px solid green;
+  width: 70%;
+  height: 35px;
+  border-radius: 9px;
+  text-align: center;
 }

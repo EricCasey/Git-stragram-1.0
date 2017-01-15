@@ -13,8 +13,9 @@
 .drop {
   border: 2px solid black;
   width: 90%;
-  margin: 1px auto;
+  margin: 2px auto;
   overflow: hidden;
+  border-radius: 4px;
 }
 .drop:selected {
 }
