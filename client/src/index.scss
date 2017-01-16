@@ -5,8 +5,8 @@ body {
   padding-top: 20px;
   font-family: sans-serif;
   text-align: center;
+  background: darkgray;
 }
-
 .App {
   width: 50%;
   max-height: 100%;
@@ -15,6 +15,7 @@ body {
   border-radius: 5px;
   min-width: 320px;
   max-width: 450px;
+  background: white;
 }
 
 #actions {
@@ -23,7 +24,6 @@ body {
   align-content: center;
   padding: 15px 5px 0 5px;
 }
-
 h1 {
    margin: 15px auto 8px auto;
 }

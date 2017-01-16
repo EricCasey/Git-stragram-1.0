@@ -1,14 +1,29 @@
 import React from 'react';
 import Form from './Form/Form1.jsx';
 import PostPreview from './PP/PP.jsx';
+import html2canvas from 'html2canvas';
+import fileDownload from 'react-file-download';
+import Advanced from './Advanced/Advanced.jsx'
 
 const App = React.createClass({
   getInitialState: function () {
     return { };
   },
 
-  takeScreenshot: function () {
+  DLScreenshot: function () {
+    html2canvas(document.getElementById("square")).then(function(canvas) {
+      document.body.appendChild(canvas);
+      var img = canvas.toDataURL("image/jpeg", 1.0);
+      fileDownload(img, 'gitsquared.jpeg');
+    });
+  },
 
+  takeScreenshot: function () {
+    html2canvas(document.getElementById("square")).then(function(canvas) {
+      // document.body.appendChild(canvas);
+      var img = canvas.toDataURL("image/jpeg", 1.0);
+      document.body.insertAdjacentHTML('beforeend', `<img src='${img}'/>`);
+    });
   },
 
   render: function () {
@@ -26,21 +41,16 @@ const App = React.createClass({
              of a code snippet from your public GitHub account to show it off
              and accrue mad internet points!</p></i>
           <p>-</p>
-          <p>If you dont have GitHub account... try 'nasa'</p>
+          <p>Don't have GitHub account? try 'NASA'</p>
           <Form />
         </div>
-        <PostPreview />
-        <div id="advanced">
-          this is where the formatting options will be <br/>
-        <ul>
-          <li>line numbers</li>
-          <li>themes</li>
-          <li>layouts</li>
-        </ul>
+        <div id="wrapUP">
+          <PostPreview />
+          <Advanced />
         </div>
         <div id="postButton">Post To *nst*gr*m!</div>
-        <div id="postButton">Post To F**kbook!</div>
-        <div id="postButton" onClick={this.takeScreenshot} >SCREENSHOT!</div>
+        <div id="postButton" onClick={this.DLScreenshot}>Download!</div>
+        <div id="postButton" onClick={this.takeScreenshot}>TEST SCREENSHOT!</div>
       </div>
     );
   },

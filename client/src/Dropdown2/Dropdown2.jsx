@@ -29,8 +29,11 @@ const Dropdown2 = React.createClass({
       if (this.props.grabbed) {
         var history = []
         for (var part in this.props.history) {
-          if (this.props.grabbed) {
+          if (this.props.grabbed && this.props.history[part].type === 'PushEvent') {
+            // console.log(this.props.history[part].type)
             history.push(part)
+          } else {
+            // console.log(`not pushing this ${this.props.history[part].type}`)
           }
         }
         return (
@@ -41,9 +44,9 @@ const Dropdown2 = React.createClass({
                   let boundItemClick = this.onItemClick.bind(this, item);
                   // console.log(typeof(this.props.history[index].created_at))
                   // console.log(this.props.username)
-                  var repoURL = this.props.history[index].repo.url
+                  var repoURL = this.props.history[history[index]].repo.url
                   var since = () => {
-                    var eventMili = Date.parse(this.props.history[index].created_at),
+                    var eventMili = Date.parse(this.props.history[history[index]].created_at),
                         nowMili = Date.now(),
                         dateDiff = nowMili - eventMili,
                         howLong = ''
@@ -69,7 +72,7 @@ const Dropdown2 = React.createClass({
                     <div className="drop" key={index} onClick={boundItemClick}>
                       <b className="repoName">{ repoURL.replace(/^(.*[/])/ig, '') }</b>
                       <br/>
-                      { this.props.history[index].type + " - " } {since()}
+                      { this.props.history[history[index]].type + " - " } {since()}
                     </div>
                   )
                 })}
