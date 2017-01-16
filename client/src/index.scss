@@ -6,6 +6,10 @@ body {
   font-family: sans-serif;
   text-align: center;
   background: darkgray;
+  .screenshot {
+    border: 3px solid green;
+    margin: 10px;
+  }
 }
 .App {
   width: 50%;
@@ -59,4 +63,9 @@ p {
   max-width: 70%;
   margin: 5px auto;
   border: 3px solid orange;
+}
+#postButton:hover {
+  background: orange;
+  border: none;
+  color: green;
 }

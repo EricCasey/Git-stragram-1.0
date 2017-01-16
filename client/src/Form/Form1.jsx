@@ -20,7 +20,6 @@ class Form extends Component {
   }
 
   grabGit = () => {
-    var githubIcon = githubIcon
     var userName = this.state.userName;
     document.getElementById("username").innerHTML=`
     <div id="userArea">

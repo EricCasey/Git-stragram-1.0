@@ -11,7 +11,6 @@
 }
 #square {
   margin-top: 98px;
-  border: 2px solid black;
   height: 329px;
   text-align: left;
   overflow: hidden;
@@ -37,12 +36,14 @@
   flex-grow: 1;
 }
 #postCodeArea {
-  margin: 40px 0 40px 0;
+  margin: 40px auto 40px auto;
   border: 3px solid black;
-  height: 280px;
+  max-height: 280px;
+  min-height: 280px;
+  width: 95%;
   border-radius: 5px;
   padding: 5px;
-
+  overflow: hidden;
 }
 #PostCode {
   font-family: monospace;

@@ -22,7 +22,7 @@ const App = React.createClass({
     html2canvas(document.getElementById("square")).then(function(canvas) {
       // document.body.appendChild(canvas);
       var img = canvas.toDataURL("image/jpeg", 1.0);
-      document.body.insertAdjacentHTML('beforeend', `<img src='${img}'/>`);
+      document.body.insertAdjacentHTML('beforeend', `<img className="screenshot" src='${img}'/>`);
     });
   },
 
@@ -46,11 +46,11 @@ const App = React.createClass({
         </div>
         <div id="wrapUP">
           <PostPreview />
+            <div id="postButton">Post To *nst*gr*m!</div>
+            <div id="postButton" onClick={this.DLScreenshot}>Download!</div>
+            <div id="postButton" onClick={this.takeScreenshot}>TEST SCREENSHOT!</div>
           <Advanced />
         </div>
-        <div id="postButton">Post To *nst*gr*m!</div>
-        <div id="postButton" onClick={this.DLScreenshot}>Download!</div>
-        <div id="postButton" onClick={this.takeScreenshot}>TEST SCREENSHOT!</div>
       </div>
     );
   },
