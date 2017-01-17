@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Advanced.scss';
+import Switch from 'react-bootstrap-switch';
 
 class Advanced extends Component {
 
@@ -24,21 +25,39 @@ class Advanced extends Component {
 
         </div>
         <div id="slider">
-          <h4 style={style}>Alignment</h4>
+          <h4 style={style}>FontSize</h4>
           <input id="xAlign" type="range"  defaultValue="50" min="0" max="100" step="1" onChange={this.xAlign}/>
         </div>
         <div id="TFoptions">
           <div className="row">
-            <div className="hexaoptions">line numbers</div>
-            <div className="hexaoptions">color reverse</div>
+            <div className="hexaoptions">
+              line numbers
+              <Switch />
+            </div>
+            <div className="hexaoptions">
+              color reverse
+              <Switch />
+            </div>
           </div>
           <div className="row">
-            <div className="hexaoptions">random</div>
-            <div className="hexaoptions">lines</div>
+            <div className="hexaoptions">
+              diff
+              <Switch />
+            </div>
+            <div className="hexaoptions">
+              lines
+              <Switch />
+            </div>
           </div>
           <div className="row">
-            <div className="hexaoptions">option5</div>
-            <div className="hexaoptions">option6</div>
+            <div className="hexaoptions">
+              wrap
+              <Switch />
+            </div>
+            <div className="hexaoptions">
+              option6
+              <Switch />
+            </div>
           </div>
 
         </div>

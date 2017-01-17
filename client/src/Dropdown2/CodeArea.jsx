@@ -20,7 +20,6 @@ class CodeArea extends Component {
     //console.log(colored)
     document.getElementById("PostCode").innerHTML=colored;
 
-
     // language guesses for hashtags here lol
      var guesshljs = hljs.highlightAuto(this.props.code).language
      var guesshljs2 = hljs.highlightAuto(this.props.code).second_best.language
@@ -35,7 +34,7 @@ class CodeArea extends Component {
     let boundItemClick = this.getSelection.bind(this);
     return (
       <div id="CodeArea">
-        <p>Highlight Your Snippet</p>
+        <p>Highlight Your Snippet (* try to get the whole line)</p>
         <pre><code onMouseUp={boundItemClick}>{this.props.code}</code></pre>
      </div>
     )
