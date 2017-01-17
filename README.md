@@ -2,7 +2,7 @@ thanks to http://fullstackreact.com for the boilerplate code!
 
 Shoutout to these stream viewers for help on this:
 > - dfhuvictory
-> - jtryon on livecoding.tv
+> - jtryon on liveedu.tv
 > - pixelprodotco on twitch
-
-bumpp
+> - KociQQ on twitch
+> - adyda on liveedu.tv

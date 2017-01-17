@@ -13,7 +13,7 @@
       margin: 0 auto;
     }
     h4 {
-
+      margin : 2px;
     }
   }
   #TFoptions {
@@ -26,13 +26,14 @@
     .hexaoptions {
       width: 100%;
       border: 1px solid black;
-      height: 40px;
-
+      height: 42px;
+      overflow: hidden;
     }
     .bootstrap-switch {
-      background: blue;
+      background: none;
       overflow: hidden;
       border-radius: 10px;
+      border: 1px solid PALEGREEN;
       margin: 0 auto;
     }
   }

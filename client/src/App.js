@@ -7,7 +7,12 @@ import Advanced from './Advanced/Advanced.jsx'
 
 const App = React.createClass({
   getInitialState: function () {
-    return { };
+    return {
+      xAlign: '',
+      Fsize: '',
+      wrapped: false,
+      light: true
+    };
   },
 
   DLScreenshot: function () {
@@ -26,6 +31,32 @@ const App = React.createClass({
     });
   },
 
+  setXalign: function (margin) {
+  //  console.log(margin)
+    this.setState({ xAlign : margin })
+  },
+
+  setFsize: function (point) {
+    console.log(point)
+    this.setState({ Fsize : point })
+  },
+
+  toggleWrap: function () {
+    if (this.state.wrapped) {
+      this.setState({ wrapped : false })
+    } else {
+      this.setState({ wrapped : true })
+    }
+  },
+
+  toggleLight: function () {
+    if (!this.state.light) {
+      this.setState({ light : true })
+    } else {
+      this.setState({ light : false })
+    }
+  },
+
   render: function () {
     return (
       <div className='App'>
@@ -41,15 +72,25 @@ const App = React.createClass({
              of a code snippet from your public GitHub account to show it off
              and accrue mad internet points!</p></i>
           <p>-</p>
-          <p>Don't have GitHub account? try 'NASA'</p>
+          <p>Don't have GitHub account try NASA</p>
           <Form />
         </div>
         <div id="wrapUP">
-          <PostPreview />
+          <PostPreview
+            xAlign={this.state.xAlign}
+            Fsize={this.state.Fsize}
+            wrapped={this.state.wrapped}
+            light={this.state.light}
+          />
             <div id="postButton">Post To *nst*gr*m!</div>
             <div id="postButton" onClick={this.DLScreenshot}>Download!</div>
             <div id="postButton" onClick={this.takeScreenshot}>TEST SCREENSHOT!</div>
-          <Advanced />
+          <Advanced
+            setXalign={this.setXalign}
+            setFsize={this.setFsize}
+            toggleWrap={this.toggleWrap}
+            toggleLight={this.toggleLight}
+          />
         </div>
       </div>
     );

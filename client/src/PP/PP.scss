@@ -44,15 +44,18 @@
   border-radius: 5px;
   padding: 5px;
   overflow: hidden;
+  pre {
+    width: 295px;
+    margin-top: -3px;
+    height: 270px;
+    border: 1px solid orange;
+    #PostCode {
+      font-family: monospace;
+      white-space: pre;
+    }
+  }
 }
-#PostCode {
-  font-family: monospace;
-  white-space: pre;
-}
-pre {
-  width: 100%;
-  margin-top: -3px;
-}
+
 #Hashtags {
   border: 1px solid blue;
   margin: 40px auto 0 auto;
