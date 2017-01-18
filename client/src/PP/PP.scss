@@ -4,7 +4,7 @@
   border: 3px solid black;
   border-radius: 5px;
   margin: 10px auto;
-  background: url('https://i.imgur.com/Y1cQA3u.png');
+  background: url('https://i.imgur.com/ysobgGt.png');
   background-position: center top;
   background-size: 100% auto;
   background-repeat: none;
@@ -15,28 +15,42 @@
   text-align: left;
   overflow: hidden;
   background: white;
+  border: 1px solid lightgray;
 }
+
 #userArea {
   max-width: 150px;
   overflow: hidden;
   display: flex;
-  float: right;
+  float: left;
   margin-top: 4px;
 }
+
 #git {
   height: 25px;
   width: 25px;
-  margin: 3px;
+  margin: 3px 3px 3px 6px;
 }
 #username h3 {
-  height: 30px;
+  height: 20px;
   max-width: 60%;
   margin-top: 7px;
-  margin-right: 5px;
+  margin-left: 5px;
   flex-grow: 1;
+  margin-bottom: 7px;
+}
+#branding {
+  float: right;
+  height: 20px;
+  text-align: center;
+  width: 35%;
+  font-size: 8pt;
+  span {
+    color: red;
+  }
 }
 #postCodeArea {
-  margin: 40px auto 40px auto;
+  margin: 0px auto 40px auto;
   border: 3px solid black;
   max-height: 280px;
   min-height: 280px;
@@ -48,7 +62,7 @@
     width: 295px;
     margin-top: -3px;
     height: 270px;
-    border: 1px solid orange;
+//    border: 1px solid orange;
     #PostCode {
       font-family: monospace;
       white-space: pre;
@@ -57,7 +71,7 @@
 }
 
 #Hashtags {
-  border: 1px solid blue;
+//  border: 1px solid blue;
   margin: 40px auto 0 auto;
   max-width: 90%;
   text-align: left;

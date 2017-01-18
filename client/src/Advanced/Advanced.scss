@@ -1,13 +1,13 @@
 #Advanced {
-  border: 3px solid violet;
   height: 250px;
   width: 95%;
   margin: 2px auto;
+  border: 2px solid lightgray;
+  border-radius: 5px;
   #themes {
 
   }
   #slider {
-    border: 1px solid grey;
     input {
       width: 85%;
       margin: 0 auto;
@@ -25,7 +25,7 @@
     }
     .hexaoptions {
       width: 100%;
-      border: 1px solid black;
+      border: 1px solid GRAY;
       height: 42px;
       overflow: hidden;
     }

@@ -1,18 +1,30 @@
 #CodeArea {
-  border: 3px solid INDIGO;
-  text-align: left;
+  border: 2px solid lightgray;
   font-size: 10pt;
   max-height: 400px;
   overflow: scroll;
   padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  text-align: left;
+  .instruction {
+    text-align: center;
+  }
 }
 code {
   font-family: monospace;
   white-space: pre;
+  text-align: left;
 }
 code::selection {
   background: red;
 }
 code::-moz-selection {
   background: red;
+}
+pre {
+  margin: 0;
+  #HLinput {
+      border: 2px solid gray;
+  }
 }

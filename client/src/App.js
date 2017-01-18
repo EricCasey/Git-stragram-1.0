@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from './Form/Form1.jsx';
 import PostPreview from './PP/PP.jsx';
-import html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas/dist/html2canvas.js';
 import fileDownload from 'react-file-download';
 import Advanced from './Advanced/Advanced.jsx'
 
@@ -11,7 +11,8 @@ const App = React.createClass({
       xAlign: '',
       Fsize: '',
       wrapped: false,
-      light: true
+      light: true,
+      grabbed: false
     };
   },
 
@@ -57,23 +58,48 @@ const App = React.createClass({
     }
   },
 
+  toggleGrabbed: function () {
+    if (!this.state.grabbed) {
+      this.setState({ grabbed : true })
+    } else {
+      this.setState({ grabbed : false })
+    }
+  //  console.log(this.state.grabbed)
+  },
+
   render: function () {
+    var prevTAG = ''
+    if (this.state.grabbed) { prevTAG = (
+      <div>
+          <div id="postButton">Post To *nst*gr*m!</div>
+          <div id="postButton" onClick={this.DLScreenshot}>Download!</div>
+          <div id="postButton" onClick={this.takeScreenshot}>TEST SCREENSHOT!</div>
+        <Advanced
+          setXalign={this.setXalign}
+          setFsize={this.setFsize}
+          toggleWrap={this.toggleWrap}
+          toggleLight={this.toggleLight}
+        />
+      </div>
+    )} else { prevTAG = (<br/>) }
     return (
       <div className='App'>
         <div id="actions">
-          <h1>
+          <h1 id="logo">
             <span id="h2git">git</span>
             <span id="h2sta">- squared</span>
             <span id="h2io"> .io</span>
             <span id="h2beta"><sup>beta<sup id="af">af</sup></sup></span>
           </h1>
-          <p>-</p>
+          <br/>
           <i><p>'git-squared' is an app that crafts square image
              of a code snippet from your public GitHub account to show it off
              and accrue mad internet points!</p></i>
           <p>-</p>
           <p>Don't have GitHub account try NASA</p>
-          <Form />
+          <Form
+            toggleGrabbed={this.toggleGrabbed}
+            />
         </div>
         <div id="wrapUP">
           <PostPreview
@@ -82,15 +108,7 @@ const App = React.createClass({
             wrapped={this.state.wrapped}
             light={this.state.light}
           />
-            <div id="postButton">Post To *nst*gr*m!</div>
-            <div id="postButton" onClick={this.DLScreenshot}>Download!</div>
-            <div id="postButton" onClick={this.takeScreenshot}>TEST SCREENSHOT!</div>
-          <Advanced
-            setXalign={this.setXalign}
-            setFsize={this.setFsize}
-            toggleWrap={this.toggleWrap}
-            toggleLight={this.toggleLight}
-          />
+        {prevTAG}
         </div>
       </div>
     );

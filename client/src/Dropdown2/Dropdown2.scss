@@ -7,24 +7,46 @@
 #dropdown {
   max-height: 200px;
   overflow: scroll;
-  margin: 0 auto;
-  border: 2px solid yellow;
+  margin: 5px auto 0 auto;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+$colors: red, orange, yellow, green, blue, purple;
+$repeat: 20;
+
+@for $i from 1 through $repeat {
+    li:nth-child(#{length($colors)}n+#{$i}) {
+        box-shadow: 0px 2px 3px lighten(nth($colors, random(length($colors))), 20%);
+    }
+}
+
+li {
+    list-style: none;
 }
 .drop {
-  border: 2px solid black;
+  border: 2px solid gray;
   width: 90%;
   margin: 2px auto;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 .drop:selected {
 }
 .drop:hover {
-  background: yellow;
+  background: lightgray;
 }
 #yep {
   background: red;
 }
 .repoName {
 
+}
+.pushSelected {
+  background: lightblue;
+  width: 90%;
+  border: 2px solid gray;
+  margin: 0 auto;
+  border-radius: 5px;
 }

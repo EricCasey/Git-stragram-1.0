@@ -10,12 +10,16 @@ body {
     border: 3px solid green;
     margin: 10px;
   }
+  #logo {
+    margin-top: 20px;
+    font-size: 35px;
+  }
 }
 .App {
   width: 50%;
   max-height: 100%;
   margin: 40px auto 40px auto;
-  border: 3px solid black;
+  border: 1px solid gray;
   border-radius: 5px;
   min-width: 320px;
   max-width: 450px;
@@ -24,7 +28,6 @@ body {
 
 #actions {
   margin: 0 auto;
-  border: 3px solid red;
   align-content: center;
   padding: 15px 5px 0 5px;
 }
@@ -37,7 +40,7 @@ h1 {
 }
 #h2sta {
   font-family: 'Sacramento', cursive;
-  font-size: 40px;
+  font-size: 50px;
   color: violet;
 }
 #h2io {
@@ -68,4 +71,9 @@ p {
   background: orange;
   border: 3px solid white;
   color: white;
+}
+
+.instruction {
+  color: red;
+  margin: 1px auto 6px auto !important;
 }

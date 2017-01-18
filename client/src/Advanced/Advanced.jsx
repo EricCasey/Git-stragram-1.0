@@ -24,14 +24,15 @@ class Advanced extends Component {
   render() {
     return (
       <div id="Advanced">
+        <p className="instruction">[4] Make it beautiful!</p>
         <div id="themes">
 
         </div>
         <div id="slider">
           <h4>x-alignment</h4>
-          <input id="xAlign" type="range"  defaultValue="5" min="-100" max="25" step="1" onChange={this.xAlign}/>
+          <input id="xAlign" type="range"  defaultValue="5" min="-150" max="25" step="1" onChange={this.xAlign}/>
           <h4>FontSize</h4>
-          <input id="Fsize" type="range"  defaultValue="12" min="9" max="72" step="1" onChange={this.Fsize}/>
+          <input id="Fsize" type="range"  defaultValue="12" min="9" max="24" step="1" onChange={this.Fsize}/>
         </div>
         <div id="TFoptions">
           <div className="row">
@@ -40,7 +41,7 @@ class Advanced extends Component {
               <Switch />
             </div>
             <div className="hexaoptions" onClick={this.props.toggleLight}>
-            - Light - 
+            - Light -
               <Switch />
             </div>
           </div>

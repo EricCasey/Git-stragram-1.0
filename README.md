@@ -5,4 +5,4 @@ Shoutout to these stream viewers for help on this:
 > - jtryon on liveedu.tv
 > - pixelprodotco on twitch
 > - KociQQ on twitch
-> - adyda on liveedu.tv
+> - adyda on liveedu.tv X 2

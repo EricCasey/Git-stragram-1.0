@@ -1,13 +1,28 @@
 #Files {
-  border: 3px solid LIMEGREEN;
+  border: 2px solid lightgray;
   overflow: scroll;
   max-height: 150px;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 8px;
 }
 .file {
   margin: 1px auto;
-  border: 1px solid blue;
-  width: 80%;
+  border: 2px solid gray;
+  width: 90%;
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  direction: rtl;
+  padding: 2px;
+  border-radius: 5px;
 }
 .file:hover {
-  background: GREENYELLOW;
+  background: lightgray;
+}
+.fileSelected {
+  background: lightblue;
+  border: 2px solid gray;
+  width: 90%;
+  border-radius: 5px;
 }

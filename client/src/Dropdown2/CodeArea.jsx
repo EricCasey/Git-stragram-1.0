@@ -34,8 +34,8 @@ class CodeArea extends Component {
     let boundItemClick = this.getSelection.bind(this);
     return (
       <div id="CodeArea">
-        <p>Highlight Your Snippet (* try to get the whole line)</p>
-        <pre><code onMouseUp={boundItemClick}>{this.props.code}</code></pre>
+        <p className="instruction">[3] Highlight Your Snippet!</p>
+        <pre id="HLinput"><code onMouseUp={boundItemClick}>{this.props.code}</code></pre>
      </div>
     )
   }

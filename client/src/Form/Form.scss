@@ -4,25 +4,31 @@
 }
 #submit {
   height: 30px;
-  background: red;
+  background: gray;
   width: 70%;
   color: white;
-  margin: 4px auto;
+  margin: 8px auto;
   padding-top: 3px;
   border: 2px solid white;
+  border-radius: 5px;
 }
 #submit:hover {
   background: white;
-  color: red;
-  border: 2px solid red;
+  color: black;
+  border: 2px solid gray;
 }
 input {
-  margin: 10px auto 10px auto;
-  border: 2px solid green;
-  width: 70%;
+  margin: 10px auto 20px auto;
+  border: 1px solid gray;
+  width: 80%;
   height: 35px;
-  border-radius: 9px;
+  border-radius: 3px;
   text-align: center;
+  background-color: white;
+}
+input:focus {
+  border: 1px solid teal;
+  background-color: white;
 }
 #GHinput {
   font-size: 25px;

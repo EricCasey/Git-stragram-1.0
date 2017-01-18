@@ -60,6 +60,7 @@
     "dotenv": "^2.0.0",
     "draft-js": "^0.9.1",
     "fs": "0.0.1-security",
+    "grommet": "^1.2.0",
     "highlight.js": "^9.9.0",
     "hiredis": "^0.5.0",
     "html2canvas": "^0.5.0-beta4",
