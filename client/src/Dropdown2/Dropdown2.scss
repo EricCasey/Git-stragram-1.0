@@ -13,24 +13,13 @@
   padding: 8px;
 }
 
-$colors: red, orange, yellow, green, blue, purple;
-$repeat: 20;
-
-@for $i from 1 through $repeat {
-    li:nth-child(#{length($colors)}n+#{$i}) {
-        box-shadow: 0px 2px 3px lighten(nth($colors, random(length($colors))), 20%);
-    }
-}
-
-li {
-    list-style: none;
-}
 .drop {
   border: 2px solid gray;
   width: 90%;
   margin: 2px auto;
   overflow: hidden;
   border-radius: 5px;
+  box-shadow: 0px 2px 5px lightblue;
 }
 .drop:selected {
 }

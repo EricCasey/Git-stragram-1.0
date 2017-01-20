@@ -76,13 +76,13 @@ const Dropdown2 = React.createClass({
                         return (<i id={dropID}>{howLong}</i>)
                       }
                   return (
-                    <li className="drop" key={index} id={dropID} onClick={ (e) => { boundItemClick(e, e.target.value, e.target.name) } }>
+                    <div className="drop" key={index} id={dropID} onClick={ (e) => { boundItemClick(e, e.target.value, e.target.name) } }>
                       <b id={dropID} className="repoName">{ repoURL.replace(/^(.*[/])/ig, '') }</b>
                       <br/>
                       <span id={dropID}>
                         { this.props.history[history[index]].type + " - " } {since()}
                       </span>
-                    </li>
+                    </div>
                   )
                 })}
             </div>

@@ -77,3 +77,18 @@ p {
   color: red;
   margin: 1px auto 6px auto !important;
 }
+
+#footer {
+  text-align: center;
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 5px auto;
+  width: 90%;
+  color: darkergray;
+  h4 {
+    margin: 5px auto;
+  }
+  p {
+
+  }
+}

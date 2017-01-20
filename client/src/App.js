@@ -110,6 +110,11 @@ const App = React.createClass({
           />
         {prevTAG}
         </div>
+        <div id="footer">
+          <h4>Privacy Policy</h4>
+          <p><i>This app doesn't save any information or run any of your code.</i></p>
+          <h4><a href="https://github.com/EricCasey/Git-stragram-1.0">Source Code</a></h4>
+      </div>
       </div>
     );
   },
