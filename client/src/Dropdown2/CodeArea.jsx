@@ -23,10 +23,10 @@ class CodeArea extends Component {
     // language guesses for hashtags here lol
      var guesshljs = hljs.highlightAuto(this.props.code).language
      var guesshljs2 = hljs.highlightAuto(this.props.code).second_best.language
-     document.getElementById("Hashtags").innerHTML=
+     document.getElementById("Hashtags").appendHTML=
       `<p>
-        #${guesshljs}
-        #${guesshljs2}
+        #${guesshljs}?
+        #${guesshljs2}?
       </p>`;
   }
 

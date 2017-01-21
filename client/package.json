@@ -67,6 +67,7 @@
     "language-classifier": "0.0.1",
     "mocha": "^3.0.2",
     "node-sass": "^4.3.0",
+    "pretty-file-icons": "^2.1.1",
     "react": "^15.4.0",
     "react-bootstrap-switch": "^15.0.4",
     "react-dom": "^15.4.0",

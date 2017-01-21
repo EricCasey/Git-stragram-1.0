@@ -71,9 +71,7 @@ const App = React.createClass({
     var prevTAG = ''
     if (this.state.grabbed) { prevTAG = (
       <div>
-          <div id="postButton">Post To *nst*gr*m!</div>
-          <div id="postButton" onClick={this.DLScreenshot}>Download!</div>
-          <div id="postButton" onClick={this.takeScreenshot}>TEST SCREENSHOT!</div>
+          <div id="postButton" onClick={this.takeScreenshot}>GENERATE IMAGE!</div>
         <Advanced
           setXalign={this.setXalign}
           setFsize={this.setFsize}
@@ -87,11 +85,13 @@ const App = React.createClass({
         <div id="actions">
           <h1 id="logo">
             <span id="h2git">git</span>
-            <span id="h2sta">- squared</span>
+            <span id="h2sta">squared</span>
             <span id="h2io"> .io</span>
-            <span id="h2beta"><sup>beta<sup id="af">af</sup></sup></span>
+            <span id="h2beta"><sup>beta</sup></span>
           </h1>
           <br/>
+            <i><h5>'for the social developer'</h5></i>
+            <p>-</p>
           <i><p>'git-squared' is an app that crafts square image
              of a code snippet from your public GitHub account to show it off
              and accrue mad internet points!</p></i>
@@ -114,6 +114,7 @@ const App = React.createClass({
           <h4>Privacy Policy</h4>
           <p><i>This app doesn't save any information or run any of your code.</i></p>
           <h4><a href="https://github.com/EricCasey/Git-stragram-1.0">Source Code</a></h4>
+          <h4><a href="">Bookmark</a></h4>
       </div>
       </div>
     );

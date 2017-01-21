@@ -50,9 +50,6 @@ h1 {
 sup {
   color: orange;
 }
-#af {
-  color:black;
-}
 p {
   margin: 0 5px;
 }
@@ -65,12 +62,14 @@ p {
 #postButton {
   max-width: 70%;
   margin: 5px auto;
-  border: 3px solid orange;
+  border: 1px solid darkgray;
+  height: 30px;
+  border-radius: 5px;
 }
 #postButton:hover {
-  background: orange;
-  border: 3px solid white;
-  color: white;
+  background: lightgray;
+  border: 3px solid gray;
+  color: black;
 }
 
 .instruction {
@@ -91,4 +90,8 @@ p {
   p {
 
   }
+}
+i {
+  height: 100px;
+  width: 100px;
 }

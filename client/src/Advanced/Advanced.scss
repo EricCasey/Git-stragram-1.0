@@ -1,5 +1,5 @@
 #Advanced {
-  height: 250px;
+  height: 150px;
   width: 95%;
   margin: 2px auto;
   border: 2px solid lightgray;
@@ -17,15 +17,12 @@
     }
   }
   #TFoptions {
-    display: flex;
     .row {
-      flex: 1;
       width: 100%;
       margin: 0;
     }
     .hexaoptions {
       width: 100%;
-      border: 1px solid GRAY;
       height: 42px;
       overflow: hidden;
     }
@@ -36,5 +33,8 @@
       border: 1px solid PALEGREEN;
       margin: 0 auto;
     }
+  }
+  h5 {
+
   }
 }

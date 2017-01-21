@@ -40,15 +40,15 @@ const PP = React.createClass({
               <h3></h3>
             </div>
           </div>
-          <div id="branding">Made with <span id="love">{love}</span> using <br/> <i>Git-Squared.io</i></div>
+          <div id="branding">Made with <span id="love">{love}</span> using <br/> <i>GitSquared.io</i></div>
           <div id="postCodeArea" style={fontSize}>
             <pre style={style}>
               <code id="PostCode" style={wrap}></code>
             </pre>
           </div>
         </div>
-        <div id="Hashtags">
-        </div>
+
+        <div id="Hashtags"> </div>
       </div>
     );
   },

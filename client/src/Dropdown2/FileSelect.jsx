@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './FileSelect.scss'
 import CodeArea from './CodeArea.jsx'
+import prettyFileIcons from 'pretty-file-icons';
+
 
 class FileSelect extends Component {
 
@@ -34,14 +36,20 @@ class FileSelect extends Component {
           <p className="instruction">[2] Choose a file!</p>
           {this.props.files.map((file, index) => {
             var boundItemClick = this.FileClick.bind(this, file),
-                fileID = `file${index}`
+                fileID = `file${index}`,
+                filename = JSON.stringify(this.props.files[index].filename).replace(/"/g,"")
+                extension = filename.split('.').pop()
+
+
             return (
               <div
                 key={index}
                 id={fileID}
                 className="file"
                 onClick={ (e) => { boundItemClick(e, e.target.value, e.target.name) } }>
-                [icon]{JSON.stringify(this.props.files[index].filename).replace(/"/g,"")}
+
+
+                <li>{JSON.stringify(this.props.files[index].filename).replace(/"/g,"")}</li>
               </div>
             )
           })}
