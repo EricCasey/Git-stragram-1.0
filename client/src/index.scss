@@ -42,6 +42,7 @@ h1 {
   font-family: 'Sacramento', cursive;
   font-size: 50px;
   color: violet;
+  margin-left: 2px;
 }
 #h2io {
  font-family: 'Open Sans', sans-serif;
@@ -61,21 +62,26 @@ p {
 }
 #postButton {
   max-width: 70%;
-  margin: 5px auto;
-  border: 1px solid darkgray;
+  margin: 7px auto;
+  border: 2px solid darkgray;
   height: 30px;
   border-radius: 5px;
+  background: gray;
+  color: white;
+  padding-top: 3px;
 }
 #postButton:hover {
   background: lightgray;
-  border: 3px solid gray;
+  border: spx solid gray;
   color: black;
 }
 
 .instruction {
-  color: red;
+  color: DARKCYAN;
   margin: 1px auto 6px auto !important;
+  font-size: 18pt;
 }
+
 
 #footer {
   text-align: center;
@@ -90,8 +96,4 @@ p {
   p {
 
   }
-}
-i {
-  height: 100px;
-  width: 100px;
 }

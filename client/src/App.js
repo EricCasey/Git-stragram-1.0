@@ -2,7 +2,6 @@ import React from 'react';
 import Form from './Form/Form1.jsx';
 import PostPreview from './PP/PP.jsx';
 import html2canvas from 'html2canvas/dist/html2canvas.js';
-import fileDownload from 'react-file-download';
 import Advanced from './Advanced/Advanced.jsx'
 
 const App = React.createClass({
@@ -16,19 +15,11 @@ const App = React.createClass({
     };
   },
 
-  DLScreenshot: function () {
-    html2canvas(document.getElementById("square")).then(function(canvas) {
-      document.body.appendChild(canvas);
-      var img = canvas.toDataURL("image/jpeg", 1.0);
-      fileDownload(img, 'gitsquared.jpeg');
-    });
-  },
-
   takeScreenshot: function () {
     html2canvas(document.getElementById("square")).then(function(canvas) {
       // document.body.appendChild(canvas);
       var img = canvas.toDataURL("image/jpeg", 1.0);
-      document.body.insertAdjacentHTML('beforeend', `<img className="screenshot" src='${img}'/>`);
+      document.getElementById("square").innerHTML = `<img className="screenshot" src='${img}'/>`
     });
   },
 
@@ -38,7 +29,7 @@ const App = React.createClass({
   },
 
   setFsize: function (point) {
-    console.log(point)
+    //console.log(point)
     this.setState({ Fsize : point })
   },
 
@@ -90,13 +81,9 @@ const App = React.createClass({
             <span id="h2beta"><sup>beta</sup></span>
           </h1>
           <br/>
-            <i><h5>'for the social developer'</h5></i>
-            <p>-</p>
-          <i><p>'git-squared' is an app that crafts square image
-             of a code snippet from your public GitHub account to show it off
-             and accrue mad internet points!</p></i>
+          <i><h5>'an open source React.js app for the social developer'</h5></i>
           <p>-</p>
-          <p>Don't have GitHub account try NASA</p>
+          <p>Don't have GitHub account&#63; try NASA</p>
           <Form
             toggleGrabbed={this.toggleGrabbed}
             />

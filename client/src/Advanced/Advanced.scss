@@ -1,9 +1,9 @@
 #Advanced {
-  height: 150px;
   width: 95%;
   margin: 2px auto;
   border: 2px solid lightgray;
   border-radius: 5px;
+  overflow: hidden;
   #themes {
 
   }
@@ -22,19 +22,19 @@
       margin: 0;
     }
     .hexaoptions {
-      width: 100%;
-      height: 42px;
+      max-width: 33%;
+      height: 25px;
       overflow: hidden;
-    }
-    .bootstrap-switch {
-      background: none;
-      overflow: hidden;
+      background: PALEGREEN;
       border-radius: 10px;
-      border: 1px solid PALEGREEN;
-      margin: 0 auto;
+      margin: 3px auto;
     }
+    .hexaoptions:hover {
+      background: PAPAYAWHIP;
+    }
+
   }
   h5 {
-
+    margin: 1px auto 10px auto;
   }
 }

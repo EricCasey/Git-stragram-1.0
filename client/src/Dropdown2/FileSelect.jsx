@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './FileSelect.scss'
 import CodeArea from './CodeArea.jsx'
-import prettyFileIcons from 'pretty-file-icons';
-
 
 class FileSelect extends Component {
 
@@ -10,7 +8,7 @@ class FileSelect extends Component {
     super(props);
     this.state = {
       code: '',
-      selected: 'file0'
+      selected: 'file1'
     };
   };
 
@@ -23,7 +21,7 @@ class FileSelect extends Component {
     })
 
     var selectedID = b.target.id,
-    previouslySelected = this.state.selected;
+        previouslySelected = this.state.selected;
 
     if(this.state.selected !== 'none') { document.getElementById(previouslySelected).className = "file"};
     document.getElementById(selectedID).className += " fileSelected";
@@ -37,19 +35,15 @@ class FileSelect extends Component {
           {this.props.files.map((file, index) => {
             var boundItemClick = this.FileClick.bind(this, file),
                 fileID = `file${index}`,
-                filename = JSON.stringify(this.props.files[index].filename).replace(/"/g,"")
+                filename = JSON.stringify(this.props.files[index].filename).replace(/"/g,""),
                 extension = filename.split('.').pop()
-
-
             return (
               <div
                 key={index}
                 id={fileID}
                 className="file"
                 onClick={ (e) => { boundItemClick(e, e.target.value, e.target.name) } }>
-
-
-                <li>{JSON.stringify(this.props.files[index].filename).replace(/"/g,"")}</li>
+                {JSON.stringify(this.props.files[index].filename).replace(/"/g,"")}
               </div>
             )
           })}

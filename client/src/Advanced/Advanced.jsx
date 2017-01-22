@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Advanced.scss';
-import Switch from 'react-bootstrap-switch';
 
 class Advanced extends Component {
 
@@ -29,13 +28,13 @@ class Advanced extends Component {
         </div>
         <div id="TFoptions">
           <div className="hexaoptions" onClick={this.props.toggleWrap}>
-            - Wrap -
-            <Switch />
+            - Wrap Toggle -
           </div>
         </div>
         <h5>
+          <br/>-<br/>
           More options coming soon! <br/>-<br/>
-        or download the source code<br/> and fucking do it yourself.
+        or download the source code<br/> and <i>fucking do it yourself.</i>
         </h5>
      </div>
     )
