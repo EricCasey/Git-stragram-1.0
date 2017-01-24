@@ -31,7 +31,7 @@ class Form extends Component {
       </svg>
       <h3>${this.state.userName}</h3>
     </div>`;
-    fetch(`http://localhost:3001/api/commitGrabber/${userName}`, {
+    fetch(`http://138.197.93.43:3001/api/commitGrabber/${userName}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
