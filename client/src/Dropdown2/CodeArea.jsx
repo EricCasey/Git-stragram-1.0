@@ -13,7 +13,7 @@ class CodeArea extends Component {
   };
 
   getSelection () {
-    var selection = window.getSelection();
+    var selection = window.getSelection(); // oh great, this isn't a thing on mobile. fuck
     var points = [Number(selection.anchorOffset), Number(selection.focusOffset)].sort((a, b) => a - b);
     this.setState({ selected: this.props.code.slice(points[0],points[1]) })
     var colored = hljs.highlightAuto(this.props.code.slice(points[0],points[1])).value
@@ -35,7 +35,7 @@ class CodeArea extends Component {
     return (
       <div id="CodeArea">
         <p className="instruction">[3] Highlight Your Snippet!</p>
-        <pre id="HLinput"><code onMouseUp={boundItemClick}>{this.props.code}</code></pre>
+        <pre id="HLinput"><code onMouseUp={boundItemClick} onTouchEnd={boundItemClick}>{this.props.code}</code></pre>
      </div>
     )
   }
