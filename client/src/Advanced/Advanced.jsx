@@ -34,7 +34,7 @@ class Advanced extends Component {
         <h5>
           <br/>-<br/>
           More options coming soon! <br/>-<br/>
-        or download the source code<br/> and <i>fucking do it yourself.</i>
+        or download the source code
         </h5>
      </div>
     )
